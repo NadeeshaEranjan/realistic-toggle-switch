@@ -1,0 +1,89 @@
+html,body{
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(-45deg, #a7a7a7, #ffffff);
+}
+
+.switch-container{
+	position: relative;
+	height: 60px;
+    width: 150px;
+    background: #f5f5f5;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    box-shadow: 2px 2px 8px -4px rgba(17, 17, 17, 0.65) inset, -6px -6px 7px 2px #fff inset;
+}
+
+.switch-container-inner{
+    position: relative;
+	overflow: hidden;
+	height: 40px;
+    width: 130px;
+    background: #e4e4e4;
+    border-radius: 40px;
+    box-sizing: border-box;
+    box-shadow: 10px 12px 11px 13px #fff inset, -6px -6px 7px 2px rgba(17, 17, 17, 0.48) inset;
+    border: 1px solid rgba(17, 17, 17, 0.14);
+}
+
+.switch-container-inner:before{
+	content: "";
+    background: #41d647;
+    width: 0px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all 0.3s ease;
+    border-bottom-left-radius: 24px;
+    border-top-left-radius: 24px;
+    box-shadow: 10px 12px 18px 0px #c3f1c4 inset, -6px -6px 20px 2px rgb(17 17 17 / 45%) inset;
+}
+
+.switch-container-inner.on:before{
+    width: 75px;
+}
+
+.toggle-switch{
+	height: 45px;
+    width: 75px;
+    background: #f5f5f5;
+    border-radius: 40px;
+    position: absolute;
+    top: 7.5px;
+    left: 7.5px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    box-shadow: 12px 9px 20px 3px #fff inset, -11px -13px 20px 2px rgba(17, 17, 17, 0.52) inset, 9px 9px 20px 0px rgba(0, 0, 0, 0.42);
+}
+
+.switch-container-inner.on ~ .toggle-switch{
+	left: 67.5px;
+}
+
+.toggle-switch-left, .toggle-switch-right{
+	height: 35px;
+    width: 30px;
+    background: #fff;
+    position: absolute;
+    top: 5px;
+    border-radius: 67%;
+}
+
+.toggle-switch-left{
+    left: 5px;
+    box-shadow: -4px 3px 11px 2px rgba(255, 255, 255, 0.65) inset, 20px 7px 36px 2px rgba(17, 17, 17, 0.17) inset
+}
+
+.toggle-switch-right{
+    right: 5px;
+    box-shadow: -13px -2px 14px 0px rgba(255, 255, 255, 0.79) inset, 18px 20px 20px 17px rgba(17, 17, 17, 0.38) inset
+}
